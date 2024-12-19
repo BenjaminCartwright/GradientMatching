@@ -24,15 +24,14 @@ The primary objectives of this project are:
 ```
 GradientMatching/
 ├── data/               # Sample datasets for experimentation
-├── models/             # Implementation of MLP, CNN, and LeNet models
-├── synthetic/          # Methods for synthetic set initialization
-├── experiments/        # Experiment scripts and analysis
-├── utils/              # Helper functions and utilities
-├── results/            # Results and visualizations
+├── networks.py             # Implementation of MLP, CNN, and LeNet models
+├── gm_utils_v2.py/              # Helper functions and utilities
+├── results_t_1/            # Experiment 1 results and visualizations
+├── results_t_2/            # Experiment 3 results and visualizations
+├── results_t_4/            # Experiment 3 results and visualizations
 ├── README.md           # Repository documentation (this file)
-└── requirements.txt    # Python dependencies
 ```
-
+Each experiement is runin a notebook file (EXP1, EXP2, EXP3). I ran these in google colab but you can download this repo and run with jupyter notebook as well. 
 ## Getting Started
 
 ### Prerequisites
@@ -41,47 +40,6 @@ To run the code in this repository, you'll need:
 - Python 3.8+
 - CUDA (for GPU support, optional but recommended)
 
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/bennygoes/GradientMatching.git
-   cd GradientMatching
-   ```
-2. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-### Usage
-
-1. **Dataset Preparation:**
-   - Place your dataset in the `data/` directory or use one of the provided datasets.
-
-2. **Running Experiments:**
-   - To train a model with a reduced dataset, use:
-     ```bash
-     python experiments/train_model.py --model cnn --dataset your_dataset_name --gradient_matching
-     ```
-   - To analyze the impact of the Hessian term:
-     ```bash
-     python experiments/train_model.py --model cnn --dataset your_dataset_name --use_hessian
-     ```
-
-3. **Visualizing Results:**
-   - Use the provided scripts in `results/` to visualize training performance and dataset reduction impact.
-
-### Example
-
-Here is an example of training a CNN model with synthetic set initialization and Hessian-based convergence analysis:
-```bash
-python experiments/train_model.py \
-  --model cnn \
-  --dataset mnist \
-  --gradient_matching \
-  --use_hessian \
-  --output_dir results/mnist_experiment
-```
 
 ## Results
 
@@ -91,17 +49,6 @@ Key results from this project include:
 - Insights into the initialization techniques for synthetic datasets.
 
 Visualizations and detailed analyses are available in the `results/` directory.
-
-## Contributing
-
-Contributions are welcome! If you'd like to contribute:
-1. Fork the repository.
-2. Create a feature branch.
-3. Submit a pull request with a detailed description of your changes.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
