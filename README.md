@@ -6,30 +6,26 @@ Data distillation (also called data condensation) is the process of compressing 
 2. Synthetic Set Initialization: We initialize our synthetic data as pure random, full white, full black, grey and per class samples
 3. Higher Order Gradient Terms: We introduce higher order derivative terms (Hessian) into our loss functions 
 
-
-The project supports various machine learning models, including:
-- Multi-Layer Perceptrons (MLPs)
-- Convolutional Neural Networks (CNNs)
-- LeNet
-
-## Goals
-
-The primary objectives of this project are:
-- **Dataset Reduction:** Reduce dataset size while preserving model performance.
-- **Gradient Matching Techniques:** Implement and evaluate gradient matching methods.
-- **Hessian Analysis:** Investigate the impact of adding higher-order gradient terms on model convergence.
+A write-up of the experiement results and further explanantion of gradient matching and the general methodologies used can be found in the attached paper here. The experiments in this repository are conducted on the MNIST dataset but FashionMNIST, SVHN, CIFAR10, CIFAR100 and TinyImageNet are supported.  
 
 ## Repository Structure
 
 ```
 GradientMatching/
-├── data/               # Sample datasets for experimentation
+├── data/                   # Sample datasets for experimentation
+├── write_up.pdf            # The report for this project submitted as my Computational Statistics final
 ├── networks.py             # Implementation of MLP, CNN, and LeNet models
-├── gm_utils_v2.py/              # Helper functions and utilities
+├── gm_utils_v2.py          # Gradient matching functions and utilities
+├── helpers.py              # General helpers and utilities 
 ├── results_t_1/            # Experiment 1 results and visualizations
 ├── results_t_2/            # Experiment 3 results and visualizations
-├── results_t_4/            # Experiment 3 results and visualizations
-├── README.md           # Repository documentation (this file)
+├── results_t_3/            # Experiment 3 results and visualizations
+├──Initial_Model_Eval.ipynb # Notebook used to evaluate our models on the original dataset
+├──EXP1.ipynb               # Notebook for experiment 1
+├──EXP2.ipynb               # Notebook for experiment 2
+├──EXP3.ipynb               # Notebook for experiment 3
+├──image_joining.ipynb      # Notebook used to combine images from original and synthetic set for display purposes 
+├── README.md               # Repository documentation (this file)
 ```
 Each experiement is runin a notebook file (EXP1, EXP2, EXP3). I ran these in google colab but you can download this repo and run with jupyter notebook as well. 
 ## Getting Started
@@ -54,5 +50,5 @@ Visualizations and detailed analyses are available in the `results/` directory.
 
 For questions or feedback, feel free to reach out to:
 - **Author:** Ben Cartwright
-- **Email:** bennygoes@example.com
+- **Email:** benjaminccartwright@gmail.com
 
