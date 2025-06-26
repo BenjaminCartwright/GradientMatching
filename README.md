@@ -1,11 +1,11 @@
 # GradientMatching
 
 ## Overview
+Data distillation (also called data condensation) is the process of compressing a large dataset into a smaller, synthetic dataset that preserves essential information for training machine learning models with comparable performance. Gradient matching is a technique for dataset distillation where the synthetic set is designed to mimic the loss dynamics of a certain model on the original data by treating the synthetic set as a learnable parameter and minimizing model loss gradient discrepancies between the original and synthetic sets. This repository explores how the following effect the gradient matching process:
+1. Model Selection: We conduct gradient matching using MLP, CNN and LeNet models
+2. Synthetic Set Initialization: We initialize our synthetic data as pure random, full white, full black, grey and per class samples
+3. Higher Order Gradient Terms: We introduce higher order derivative terms (Hessian) into our loss functions 
 
-This repository explores gradient matching techniques to reduce dataset size while maintaining good accuracy across machine learning models. Specifically, the project focuses on:
-
-1. Evaluating synthetic set initialization methods for Convolutional Neural Networks (CNNs).
-2. Analyzing model convergence by incorporating higher-order gradient terms, such as the Hessian.
 
 The project supports various machine learning models, including:
 - Multi-Layer Perceptrons (MLPs)
