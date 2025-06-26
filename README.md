@@ -6,7 +6,7 @@ Data distillation (also called data condensation) is the process of compressing 
 2. Synthetic Set Initialization: We initialize our synthetic data as pure random, full white, full black, grey and per class samples
 3. Higher Order Gradient Terms: We introduce higher order derivative terms (Hessian) into our loss functions 
 
-A write-up of the experiement results and further explanantion of gradient matching and the general methodologies used can be found in the attached paper here. The experiments in this repository are conducted on the MNIST dataset but FashionMNIST, SVHN, CIFAR10, CIFAR100 and TinyImageNet are supported.  
+A write-up of the experiement results and further explanantion of gradient matching and the general methodologies used can be found in the attached paper here: https://github.com/BenjaminCartwright/GradientMatching/blob/main/write_up.pdf. The experiments in this repository are conducted on the MNIST dataset but FashionMNIST, SVHN, CIFAR10, CIFAR100 and TinyImageNet are supported.  
 
 ## Repository Structure
 
